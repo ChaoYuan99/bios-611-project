@@ -9,7 +9,7 @@ library(ggThemeAssist)
 library(gridExtra)
 library(gapminder)
 
-vgsales <- read.csv("C:/Users/ycapp/Desktop/vgsales.csv")
+vgsales <- read.csv("Data/vgsales.csv")
 #view some information of this dataset
 str(vgsales)
 summary(vgsales)
@@ -38,4 +38,4 @@ p1 = ggplot(data = Year_sales, aes(x = Year, y = sum_global_sales, group = 1)) +
   geom_line() +
   geom_point() +
   theme_classic()
-ggsave("Year_sales.png",p1)
+ggsave("Figures/Year_sales.png",p1)
