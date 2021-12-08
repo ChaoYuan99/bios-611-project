@@ -9,10 +9,12 @@ library(ggThemeAssist)
 library(gridExtra)
 library(gapminder)
 
+vgsales <- read.csv("Data/vgsales.csv")
 #view some information of this dataset
 str(vgsales)
 summary(vgsales)
 head(vgsales)
+
 
 #data conversion and cleaning
 vgsales <- data.frame(vgsales)
@@ -31,4 +33,4 @@ p2 = ggplot(data = Genre_sales, aes(x = Genre, y = sum_global_sales, fill = Genr
   geom_bar(stat = 'identity') +
   geom_label(aes(label = sum_global_sales), size = 4) +
   theme_classic() 
-ggsave("Genre_sales.png",p2)
+ggsave("Figures/Genre_sales.png",p2)
