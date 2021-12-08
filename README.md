@@ -43,6 +43,7 @@ docker run -v /$(pwd):/home/rstudio/work -e PASSWORD=mypassword --rm -p 8787:878
 ```
 ***
 ***Create Report***
+
 Create report with Makefile
 ```
 make report.pdf
