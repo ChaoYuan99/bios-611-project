@@ -1,4 +1,4 @@
-vgsales <- read.csv("C:/Users/ycapp/Desktop/vgsales.csv")
+vgsales <- read.csv("Data/vgsales.csv")
 #view some information of this dataset
 
 #data conversion and cleaning
