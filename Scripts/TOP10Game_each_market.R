@@ -9,7 +9,8 @@ library(ggThemeAssist)
 library(gridExtra)
 library(gapminder)
 
-vgsales <- read.csv("C:/Users/ycapp/Desktop/vgsales.csv")
+
+vgsales <- read.csv("Data/vgsales.csv")
 # NA Market--Top 10
 NA_10_games <- vgsales %>% group_by(Name) %>% 
   summarise(sum_na_sales = sum(NA_Sales), .groups = 'drop') %>%
@@ -167,4 +168,4 @@ d <- ggplot(data = Other_10_games, aes(x = Name, y = sum_other_sales, fill = Nam
   theme(axis.text.x = element_text(angle = 30, vjust = 0.8, hjust=0.6),legend.position="none")
 
 p6 = grid.arrange(a, b, c, d, ncol = 2, nrow = 2) 
-ggsave("TOP10Game_each_market.png",p6)
+ggsave("Figures/TOP10Game_each_market.png",p6)
