@@ -42,6 +42,12 @@ docker build .  -f /Users/ycapp/611dockerfile/Dockerfile.txt  -t 611chao
 docker run -v /$(pwd):/home/rstudio/work -e PASSWORD=mypassword --rm -p 8787:8787 611chao
 ```
 ***
+***Create Report***
+Create report with Makefile
+```
+make report.pdf
+```
+***
 ***Shiny Configuration***
 ```
 docker run -p 8080:8080 -p 8787:8787 -e PASSWORD=mypassword -v /$(pwd):/home/rstudio/project -t 611chao
