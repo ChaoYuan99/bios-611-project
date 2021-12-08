@@ -9,6 +9,7 @@ library(ggThemeAssist)
 library(gridExtra)
 library(gapminder)
 
+vgsales <- read.csv("Data/vgsales.csv")
 vgsales <- vgsales[vgsales$Year!='N/A',]
 
 #Year_sales
@@ -32,4 +33,4 @@ p5 = ggplot(data = Genre_game_num, aes(x = Year, y = count_name, fill = Genre)) 
   ) + labs(title = "Game Sold Quantity By Genre", y = "Games Count",
            colour = "Blue") + theme(legend.background = element_rect(fill = "aliceblue"),
                                     legend.position = "right")
-ggsave("Genre_year.png",p5)
+ggsave("Figures/Genre_year.png",p5)
