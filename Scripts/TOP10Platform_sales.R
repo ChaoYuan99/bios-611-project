@@ -9,6 +9,8 @@ library(ggThemeAssist)
 library(gridExtra)
 library(gapminder)
 
+vgsales <- read.csv("Data/vgsales.csv")
+
 Platform_sales <- vgsales %>% group_by(Platform) %>% summarise(sum_global_sales = sum(Global_Sales), .groups = 'drop') %>% 
   arrange(desc(sum_global_sales))
 
@@ -18,4 +20,4 @@ p3 = ggplot(data = head(Platform_sales, 10), aes(x = Platform, y = sum_global_sa
   theme_classic() +
   coord_flip() +
   labs(title = "Top 10 Global Sales By Platform", y = "Global Sales",colour = "Blue")
-ggsave("TOP10Platform_sales.png",p3)
+ggsave("Figures/TOP10Platform_sales.png",p3)
