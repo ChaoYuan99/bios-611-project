@@ -2,7 +2,7 @@
 
 clean:
 	rm -f Figures/*
-	rm -f 611report.pdf
+	rm -f 611Report.pdf
 
 clean_data: Data/vgsales.csv Scripts/data_clean.R
 	Rscript Scripts/data_clean.R
